@@ -29,4 +29,11 @@ export const theme = extendTheme({
     heading: "Poppins",
     body: "Poppins",
   },
+  breakpoints: {
+    sm: "320px",
+    md: "768px",
+    lg: "1024px",
+    xl: "1450px",
+    "2xl": "2560px",
+  },
 });
