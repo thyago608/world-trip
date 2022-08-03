@@ -1,4 +1,4 @@
-import { Box, Flex, Text, VStack, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack, Image, useBreakpointValue } from "@chakra-ui/react";
 
 export function Banner() {
     const isWideScreen = useBreakpointValue({
@@ -15,10 +15,11 @@ export function Banner() {
             padding={5}
         >
             <Flex
-                maxW={isWideScreen ? 820 : 700}
+                maxW={isWideScreen ? 945 : 700}
                 margin="0 auto"
+                justify="space-between"
             >
-                <VStack spacing={2} align="start">
+                <VStack mt={2} spacing={2} align="start" justify="center">
                     <Text
                         fontWeight="medium"
                         fontSize="xl"
@@ -35,6 +36,15 @@ export function Banner() {
                         Chegou a hora de tirar do papel a viagem que você sempre sonhou.
                     </Text>
                 </VStack>
+
+                {isWideScreen &&
+                    <Box position="relative" top="40px">
+                        <Image
+                            h={200}
+                            src="/images/airplane.svg"
+                            alt="Airplane"
+                        />
+                    </Box>}
             </Flex>
         </Box >
     );

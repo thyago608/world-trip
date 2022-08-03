@@ -30,7 +30,6 @@ export const theme = extendTheme({
     body: "Poppins",
   },
   breakpoints: {
-    sm: "320px",
     md: "768px",
     lg: "1024px",
     xl: "1450px",
