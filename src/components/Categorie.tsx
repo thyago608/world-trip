@@ -27,7 +27,7 @@ export function Categorie({ icon, title, position }: CategorieProps) {
       justify={position}
     >
       <Image {...imageProps} alt={title} />
-      <Text fontSize="xl" fontWeight="medium">{title}</Text>
+      <Text fontSize="lg" fontWeight="medium">{title}</Text>
     </Flex>
   );
 }
