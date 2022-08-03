@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Box } from "@chakra-ui/react";
 import { Banner } from "components/Banner";
+import { Categories } from "components/Categories";
 
 export default function Home() {
     return (
@@ -10,6 +11,7 @@ export default function Home() {
             </Head>
             <Box as="main">
                 <Banner />
+                <Categories />
             </Box>
         </>
     );

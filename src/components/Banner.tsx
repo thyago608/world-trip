@@ -12,6 +12,7 @@ export function Banner() {
             as="section"
             backgroundImage={"url('/images/background-desktop.svg')"}
             backgroundRepeat="no-repeat"
+            backgroundSize="cover"
             padding={5}
         >
             <Flex
