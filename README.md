@@ -1,4 +1,6 @@
-<img src="public/images/capa.svg" alt="world-trip"/>
+<p align="center">
+    <img src="public/images/capa.svg" alt="world-trip"/>
+</p>
 
 ## Sobre
 
