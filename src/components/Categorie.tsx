@@ -1,36 +1,24 @@
 import { Flex, Text, Image, useBreakpointValue } from "@chakra-ui/react";
 
-type CategorieProps = {
+interface CategorieProps {
   icon: string;
   title: string;
-};
+}
 
 export function Categorie({ icon, title }: CategorieProps) {
-  const isDesktop = useBreakpointValue({
+  const isWideScreen = useBreakpointValue({
     base: false,
-    lg: true,
+    md: false,
+    lg: true
   });
 
-  const imageSize = isDesktop
-    ? {
-        width: "50px",
-        height: "50px",
-      }
-    : {
-        width: "10px",
-        height: "10px",
-      };
+  const imageVersion = isWideScreen ? icon : "/images/ellipse.svg";
+  const heightVersion = isWideScreen ? "85px" : 2;
 
   return (
-    <Flex gap="2" direction={isDesktop ? "column" : "row"} align="center">
-      <Image
-        src={isDesktop ? icon : "/images/ellipse.svg"}
-        alt={title}
-        {...imageSize}
-      />
-      <Text color="gray.500" fontWeight="500" fontSize="lg">
-        {title}
-      </Text>
+    <Flex>
+      <Image h={heightVersion} src={imageVersion} alt={title} />
+      <Text>{title}</Text>
     </Flex>
   );
 }
