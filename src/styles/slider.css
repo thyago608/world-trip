@@ -19,10 +19,12 @@
 
   object-fit: cover;
 }
+
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
   color: #ffba08;
 }
+
 .swiper-pagination .swiper-pagination-bullet {
   background: #999999;
   opacity: 1;
