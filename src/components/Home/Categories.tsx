@@ -1,5 +1,5 @@
 import { Grid, GridItem, useBreakpointValue } from "@chakra-ui/react";
-import { Categorie } from "components/Categorie";
+import { Categorie } from "./Categorie";
 
 const categories = [
     {

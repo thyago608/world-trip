@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Box, Heading, Divider } from "@chakra-ui/react";
-import { Banner, Categories, Continent } from "components";
+import { Banner, Categories, ContinentsSlider } from "components/Home";
 
 export default function Home() {
     return (
@@ -28,7 +28,7 @@ export default function Home() {
                             Vamos nessa?<br />Então escolha seu continente
                         </Heading>
                     </Box>
-                    <Continent />
+                    <ContinentsSlider />
                 </Box>
             </Box>
         </>
