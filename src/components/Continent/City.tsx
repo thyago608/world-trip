@@ -12,6 +12,7 @@ export function City({ city }: CityProps) {
                 src={city.image}
                 alt={city.city}
                 borderRadius={1}
+                title={city.city}
             />
             <Flex
                 width="100%"

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Box, VStack, Text } from "@chakra-ui/react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -41,30 +42,40 @@ export function ContinentsSlider() {
             >
                 {continents.map(continent => (
                     <SwiperSlide key={continent.title}>
-                        <VStack
+                        <Box
                             w="100%"
                             h="100%"
                             backgroundImage="url('/images/background-carousel.svg')"
                             backgroundRepeat="no-repeat"
                             backgroundSize="cover"
-                            justify="center"
-                            align="center"
                         >
-                            <Text
-                                fontSize="2xl"
-                                fontWeight="bold"
-                                color="white.50"
-                            >
-                                {continent.title}
-                            </Text>
-                            <Text
-                                fontSize="sm"
-                                fontWeight="bold"
-                                color="gray.50"
-                            >
-                                {continent.description}
-                            </Text>
-                        </VStack>
+                            <Link href="/continent/europa">
+                                <VStack
+                                    as="a"
+                                    w="80%"
+                                    h="100%"
+                                    m="0 auto"
+                                    justify="center"
+                                    align="center"
+                                    cursor="pointer"
+                                >
+                                    <Text
+                                        fontSize="2xl"
+                                        fontWeight="bold"
+                                        color="white.50"
+                                    >
+                                        {continent.title}
+                                    </Text>
+                                    <Text
+                                        fontSize="sm"
+                                        fontWeight="bold"
+                                        color="gray.50"
+                                    >
+                                        {continent.description}
+                                    </Text>
+                                </VStack>
+                            </Link>
+                        </Box>
                     </SwiperSlide>
                 ))}
             </Swiper>

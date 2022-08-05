@@ -22,12 +22,16 @@ export function Categorie({ icon, title, position }: CategorieProps) {
   return (
     <Flex
       align="center"
-      flexDir={isWideScreen ? "column" : "row"}
+      flexDir={{ base: "row", lg: "column" }}
       gap={2}
       justify={position}
     >
-      <Image {...imageProps} alt={title} />
-      <Text fontSize="lg" fontWeight="medium">{title}</Text>
+      <Image {...imageProps} alt={title} title={title} />
+      <Text
+        fontSize="lg"
+        fontWeight="medium">
+        {title}
+      </Text>
     </Flex>
   );
 }

@@ -16,7 +16,11 @@ export function Label({ heading, text }: LabelProps) {
             >
                 {heading}
             </Text>
-            <Text fontSize="xl" fontWeight={{ base: "normal", lg: "semibold" }}>{text}</Text>
+            <Text
+                fontSize="xl"
+                fontWeight={{ base: "normal", lg: "semibold" }}
+                textAlign="center"
+            >{text}</Text>
         </VStack>
     );
 }

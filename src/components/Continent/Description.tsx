@@ -25,6 +25,7 @@ export function Description() {
             </Text>
             <Flex
                 justify="space-between"
+                gap={8}
                 paddingRight={{ base: 2, lg: 0 }}
                 w={{ base: "100%", md: "500px", lg: "400px" }}
             >

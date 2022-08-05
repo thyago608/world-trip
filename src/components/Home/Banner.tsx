@@ -43,7 +43,8 @@ export function Banner() {
                         <Image
                             h={200}
                             src="/images/airplane.svg"
-                            alt="Airplane"
+                            alt="Avião"
+                            title="Avião"
                         />
                     </Box>}
             </Flex>
