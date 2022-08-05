@@ -6,7 +6,6 @@ export function Description() {
         <Flex
             maxW={{ base: "945px", xl: "1000px" }}
             margin="0 auto"
-            as="section"
             flexDir={{ base: "column", lg: "row" }}
             align="center"
             justify="space-between"
