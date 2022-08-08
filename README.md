@@ -17,6 +17,9 @@ O projeto foi desenvolvido com as seguintes tecnologias:
 - [Typescript](https://www.typescriptlang.org/)
 - [ChakraUI](https://chakra-ui.com/)
 - [SwiperJs](https://swiperjs.com/)
+- [FramerMotion](https://www.framer.com/motion/)
+- [Pexels](https://github.com/pexels/pexels-javascript)
+- [Back4App](https://www.back4app.com/database/back4app/list-of-all-continents-countries-cities)
 
 
 ---
@@ -37,5 +40,6 @@ O projeto foi desenvolvido com as seguintes tecnologias:
     $ yarn start
 ```
 
+[Visite](https://world-trip-wheat.vercel.app/) 
 
 Desenvolvido por Thyago Ribeiro 👋
