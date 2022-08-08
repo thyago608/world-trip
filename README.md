@@ -40,6 +40,6 @@ O projeto foi desenvolvido com as seguintes tecnologias:
     $ yarn start
 ```
 
-[Visite](https://world-trip-wheat.vercel.app/) 
+[Visite](https://world-trip-in6vvrssa-thyago608.vercel.app/) 
 
 Desenvolvido por Thyago Ribeiro 👋
