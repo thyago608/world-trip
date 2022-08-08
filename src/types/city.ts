@@ -1,6 +1,7 @@
 export interface City {
+  id: string;
+  name: string;
   image: string;
-  city: string;
   country: string;
   countryFlag: string;
 }

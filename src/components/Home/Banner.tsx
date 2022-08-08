@@ -16,7 +16,7 @@ export function Banner() {
             padding={5}
         >
             <Flex
-                maxW={isWideScreen ? 945 : 700}
+                maxW={isWideScreen ? 1000 : 700}
                 margin="0 auto"
                 justify="space-between"
             >

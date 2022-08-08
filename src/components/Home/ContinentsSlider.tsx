@@ -1,37 +1,20 @@
 import Link from "next/link";
 import { Box, VStack, Text } from "@chakra-ui/react";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import { Continent } from "types/continent";
 import 'swiper/css';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const continents = [
-    {
-        title: "Europa",
-        description: "O continente mais antigo",
-    },
-    {
-        title: "África",
-        description: "O continente mais antigo",
-    },
-    {
-        title: "América",
-        description: "O continente mais antigo",
-    },
-    {
-        title: "Ásia",
-        description: "O continente mais antigo",
-    },
-    {
-        title: "Oceania",
-        description: "O continente mais antigo",
-    },
-];
+interface ContinentsSliderProps {
+    continents: Continent[];
+}
 
-export function ContinentsSlider() {
+export function ContinentsSlider({ continents }: ContinentsSliderProps) {
+
     return (
-        <Box h={300} m="0 auto" mb={6} maxW={1000}>
+        <Box h={300} m="0 auto" mb={6} maxW={1100}>
             <Swiper
                 cssMode={true}
                 navigation={true}
@@ -40,16 +23,21 @@ export function ContinentsSlider() {
                 keyboard={true}
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
             >
-                {continents.map(continent => (
-                    <SwiperSlide key={continent.title}>
+                {continents?.map(continent => (
+                    <SwiperSlide key={continent.id}>
                         <Box
                             w="100%"
                             h="100%"
-                            backgroundImage="url('/images/background-carousel.svg')"
+                            backgroundImage={`url(${continent.image})`}
+                            backgroundColor="black"
                             backgroundRepeat="no-repeat"
                             backgroundSize="cover"
+                            backgroundPosition="bottom"
                         >
-                            <Link href="/continent/europa">
+                            <Link href={{
+                                pathname: `/continent/${continent.path}`,
+                                query: { id: continent.id }
+                            }}>
                                 <VStack
                                     as="a"
                                     w="80%"
@@ -64,14 +52,14 @@ export function ContinentsSlider() {
                                         fontWeight="bold"
                                         color="white.50"
                                     >
-                                        {continent.title}
+                                        {continent.name}
                                     </Text>
                                     <Text
                                         fontSize="sm"
                                         fontWeight="bold"
                                         color="gray.50"
                                     >
-                                        {continent.description}
+                                        {continent.shortDescription}
                                     </Text>
                                 </VStack>
                             </Link>

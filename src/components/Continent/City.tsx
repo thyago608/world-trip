@@ -10,12 +10,16 @@ export function City({ city }: CityProps) {
         <VStack maxW={256} spacing="none">
             <Image
                 src={city.image}
-                alt={city.city}
+                fallbackSrc="/vercel.svg"
+                alt={city.name}
                 borderRadius={1}
-                title={city.city}
+                title={city.name}
+                w="100%"
+                h={175}
             />
             <Flex
                 width="100%"
+                h={150}
                 justify="space-between"
                 align="center"
                 p="1.125rem 1.5rem 1.563rem"
@@ -30,7 +34,7 @@ export function City({ city }: CityProps) {
                         fontWeight="semibold"
                         fontSize="xl"
                     >
-                        {city.city}</Text>
+                        {city.name}</Text>
                     <Text
                         as="span"
                         fontWeight="medium"
@@ -39,10 +43,12 @@ export function City({ city }: CityProps) {
                     >{city.country}</Text>
                 </VStack>
                 <Image
-                    src={city.countryFlag}
-                    alt={city.country}
                     w={30}
                     h={30}
+                    src={city.countryFlag}
+                    fallbackSrc="/favicon.ico"
+                    alt={city.country}
+                    title={city.country}
                 />
             </Flex>
         </VStack>

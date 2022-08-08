@@ -47,8 +47,8 @@ export function Categories() {
     return (
         <Grid
             as="section"
-            margin="0 auto"
-            maxW={{ base: "600px", lg: "1000px" }}
+            margin="2rem auto"
+            maxW={{ base: "600px", lg: "1100px" }}
             p={8}
             gap={27}
             {...gridStyle}

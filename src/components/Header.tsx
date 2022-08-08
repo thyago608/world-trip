@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { Flex, Image, Link as ChakraLink, Button } from "@chakra-ui/react";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
@@ -16,11 +17,16 @@ export function Header() {
   const containerJustify = routeContinent ? "space-between" : "center";
 
   return (
-    <Flex mb={2} as="header">
+    <motion.header
+      style={{ marginTop: '0.5rem' }}
+      initial={{ opacity: 0, x: 300 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <Flex
         w="100%"
         h={50}
-        maxW={1000}
+        maxW={1200}
         m="0 auto"
         px={4}
       >
@@ -44,6 +50,6 @@ export function Header() {
           />
         </Flex>
       </Flex>
-    </Flex>
+    </motion.header>
   );
 }

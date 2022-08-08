@@ -4,7 +4,7 @@ import { Label } from "./Label";
 export function Description() {
     return (
         <Flex
-            maxW={{ base: "945px", xl: "1000px" }}
+            maxW={{ base: "1100px", xl: "1200px" }}
             margin="0 auto"
             flexDir={{ base: "column", lg: "row" }}
             align="center"
@@ -18,10 +18,7 @@ export function Description() {
                 textAlign={{ base: "justify", md: "center", lg: "justify" }}
                 w={{ base: "100%", lg: "400px" }}
             >
-                A Europa é, por convenção, um dos seis continentes do mundo.
-                Compreendendo a península ocidental da Eurásia,
-                a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais,
-                o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit officiis nemo nulla odit. Repudiandae adipisci hic magnam in doloremque. Atque praesentium repudiandae nesciunt ex voluptate. Aliquid alias delectus ad expedita?
             </Text>
             <Flex
                 justify="space-between"
